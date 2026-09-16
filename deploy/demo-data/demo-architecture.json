@@ -1,0 +1,23 @@
+{
+  "relationships": [
+    { "source": "subscription_sub-1111", "target": "rg-web-dev", "relationship": "contains" },
+    { "source": "subscription_sub-1111", "target": "rg-data-dev", "relationship": "contains" },
+    { "source": "subscription_sub-2222", "target": "rg-pay-prod", "relationship": "contains" },
+
+    { "source": "rg-web-dev", "target": "vnet-dev", "relationship": "contains" },
+    { "source": "vnet-dev", "target": "subnet-app", "relationship": "contains" },
+    { "source": "subnet-app", "target": "vm-web-01", "relationship": "hosts" },
+    { "source": "subnet-app", "target": "aks-dev", "relationship": "hosts" },
+    { "source": "rg-web-dev", "target": "appinsights-dev", "relationship": "monitors" },
+
+    { "source": "rg-data-dev", "target": "stdev001", "relationship": "contains" },
+    { "source": "rg-data-dev", "target": "sql-dev", "relationship": "contains" },
+    { "source": "vm-web-01", "target": "sql-dev", "relationship": "connects" },
+
+    { "source": "rg-pay-prod", "target": "vnet-prod", "relationship": "contains" },
+    { "source": "vnet-prod", "target": "subnet-pay", "relationship": "contains" },
+    { "source": "subnet-pay", "target": "appsvc-pay", "relationship": "hosts" },
+    { "source": "rg-pay-prod", "target": "stpay001", "relationship": "contains" },
+    { "source": "appsvc-pay", "target": "stpay001", "relationship": "writes" }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "data": {
+    "subscriptions": {
+      "sub-1111": {
+        "metadata": {
+          "subscriptionName": "Demo Dev Subscription",
+          "region": "East US",
+          "environment": "dev",
+          "globalBusiness": "ict",
+          "globalSubfunction": "GDPA",
+          "applicationName": "MGMT/AZURE"
+        },
+        "resource_groups": {
+          "rg-web-dev": {
+            "categories": {
+              "compute": { "virtual_machines": ["vm-web-01"], "aks_clusters": ["aks-dev"] },
+              "networking": { "virtual_networks": ["vnet-dev"], "subnets": ["subnet-app"] },
+              "monitoring": { "application_insights": ["appinsights-dev"] }
+            }
+          },
+          "rg-data-dev": {
+            "categories": {
+              "storage": { "storage_accounts": ["stdev001"] },
+              "data": { "sql_servers": ["sql-dev"] }
+            }
+          }
+        }
+      },
+      "sub-2222": {
+        "metadata": {
+          "subscriptionName": "Demo Prod Subscription",
+          "region": "West Europe",
+          "environment": "prod",
+          "globalBusiness": "ict",
+          "globalSubfunction": "GDPA",
+          "applicationName": "MGMT/AZURE"
+        },
+        "resource_groups": {
+          "rg-pay-prod": {
+            "categories": {
+              "app_services": { "web_apps": ["appsvc-pay"] },
+              "networking": { "virtual_networks": ["vnet-prod"], "subnets": ["subnet-pay"] },
+              "storage": { "storage_accounts": ["stpay001"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "dimensions": [
+    {
+      "key": "ResourceGroup",
+      "data": [
+        { "name": "rg-web-dev",   "value": 265.50 },
+        { "name": "rg-data-dev",  "value": 95.20  },
+        { "name": "rg-pay-prod",  "value": 130.75 }
+      ]
+    },
+    {
+      "key": "Resource",
+      "data": [
+        { "name": "aks-dev",          "value": 185.00 },
+        { "name": "vm-web-01",        "value": 52.50  },
+        { "name": "sql-dev",          "value": 80.20  },
+        { "name": "appinsights-dev",  "value": 18.00  },
+        { "name": "stdev001",         "value": 10.00  },
+        { "name": "appsvc-pay",       "value": 72.75  },
+        { "name": "stpay001",         "value": 45.00  },
+        { "name": "vnet-dev",         "value": 6.00   },
+        { "name": "vnet-prod",        "value": 7.00   },
+        { "name": "subnet-app",       "value": 1.50   },
+        { "name": "subnet-pay",       "value": 3.00   }
+      ]
+    }
+  ]
+}

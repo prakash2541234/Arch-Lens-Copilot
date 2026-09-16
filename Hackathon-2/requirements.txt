@@ -1,0 +1,13 @@
+azure-functions
+aiohttp
+httpx
+requests
+azure-core
+azure-identity
+azure-cosmos>=4.0.0
+azure-keyvault-certificates
+azure-keyvault-secrets
+azure-mgmt-authorization
+azure-mgmt-keyvault
+azure-mgmt-resource
+azure-mgmt-storage

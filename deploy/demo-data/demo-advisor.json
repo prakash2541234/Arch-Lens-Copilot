@@ -1,0 +1,35 @@
+{
+  "scoreSummary": {
+    "overall": 44,
+    "security": 42,
+    "reliability": 38,
+    "performanceEfficiency": 48,
+    "costOptimization": 61,
+    "operationalExcellence": 33
+  },
+  "recommendations": [
+    { "recommendation": "Managed identity should be enabled on web apps", "severity": "high", "resourceType": "App services", "activeResources": 1, "impactedPillars": ["Security"] },
+    { "recommendation": "Restricted network access should be configured on Internet exposed Function app", "severity": "high", "resourceType": "App services", "activeResources": 3, "impactedPillars": ["Security"] },
+    { "recommendation": "Function apps should have authentication enabled", "severity": "high", "resourceType": "App services", "activeResources": 2, "impactedPillars": ["Security"] },
+    { "recommendation": "App Service apps should have authentication enabled", "severity": "high", "resourceType": "App services", "activeResources": 1, "impactedPillars": ["Security"] },
+    { "recommendation": "Saved-queries in Azure Monitor should be saved in customer storage account for logs encryption", "severity": "medium", "resourceType": "Log Analytics workspaces", "activeResources": 4, "impactedPillars": ["Security"] },
+    { "recommendation": "Microsoft Foundry resources should have key access disabled (disable local authentication)", "severity": "medium", "resourceType": "Cognitive Services", "activeResources": 3, "impactedPillars": ["Security"] },
+    { "recommendation": "Managed identity should be enabled on function apps", "severity": "medium", "resourceType": "App services", "activeResources": 2, "impactedPillars": ["Security"] },
+    { "recommendation": "Storage accounts should prevent shared key access", "severity": "medium", "resourceType": "Storage Accounts", "activeResources": 2, "impactedPillars": ["Security"] },
+    { "recommendation": "Diagnostic logs in App Service should be enabled", "severity": "medium", "resourceType": "App services", "activeResources": 1, "impactedPillars": ["Security"] },
+    { "recommendation": "Microsoft Foundry resources should use Azure Private Link", "severity": "medium", "resourceType": "Cognitive Services", "activeResources": 3, "impactedPillars": ["Security"] },
+    { "recommendation": "Storage accounts should allow access from trusted Microsoft services", "severity": "medium", "resourceType": "Storage Accounts", "activeResources": 1, "impactedPillars": ["Security"] },
+    { "recommendation": "Log Analytics Workspaces should block non-Azure Active Directory based ingestion", "severity": "medium", "resourceType": "Log Analytics workspaces", "activeResources": 4, "impactedPillars": ["Security"] },
+    { "recommendation": "Storage accounts should restrict network access using virtual network rules", "severity": "medium", "resourceType": "Storage Accounts", "activeResources": 2, "impactedPillars": ["Security"] },
+    { "recommendation": "Storage account should use a private link connection", "severity": "medium", "resourceType": "Storage Accounts", "activeResources": 2, "impactedPillars": ["Security"] },
+    { "recommendation": "App Service apps should have Client Certificates (Incoming client certificates) enabled", "severity": "medium", "resourceType": "App services", "activeResources": 1, "impactedPillars": ["Security"] },
+    { "recommendation": "Support for TLS 1.0 and TLS 1.1 in Azure storage accounts is ending", "severity": "high", "resourceType": "Storage Accounts", "activeResources": 1, "impactedPillars": ["Security"] },
+    { "recommendation": "Enable zone redundancy for storage accounts to improve high availability and resiliency", "severity": "high", "resourceType": "Storage Accounts", "activeResources": 2, "totalResources": 4, "impactedPillars": ["Reliability"] },
+    { "recommendation": "Enable Health check for App Service", "severity": "high", "resourceType": "App services", "activeResources": 1, "totalResources": 1, "impactedPillars": ["Reliability"] },
+    { "recommendation": "Use Standard or Premium tier", "severity": "high", "resourceType": "App services", "activeResources": 2, "totalResources": 4, "impactedPillars": ["Reliability"] },
+    { "recommendation": "Set minimum instance count for App Service to 2", "severity": "high", "resourceType": "App services", "activeResources": 3, "totalResources": 5, "impactedPillars": ["Reliability"] },
+    { "recommendation": "Use zone-supported App Service Plan", "severity": "high", "resourceType": "App Service plans", "activeResources": 3, "totalResources": 5, "impactedPillars": ["Reliability"] },
+    { "recommendation": "Enable Soft Delete to protect your blob data", "severity": "medium", "resourceType": "Storage Accounts", "activeResources": 3, "totalResources": 3, "impactedPillars": ["Reliability"] },
+    { "recommendation": "Right-size App Service plans to reduce over-provisioned spend", "severity": "medium", "resourceType": "App Service plans", "activeResources": 2, "impactedPillars": ["Cost Optimization"] }
+  ]
+}

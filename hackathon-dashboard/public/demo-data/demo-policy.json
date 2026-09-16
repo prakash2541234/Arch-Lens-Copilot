@@ -1,0 +1,163 @@
+{
+  "definitions": [
+    {
+      "name": "Microsoft Managed Control 1599 - Developer Configura",
+      "type": "Static",
+      "definitionType": "Policy",
+      "category": "Regulatory Compliance"
+    },
+    {
+      "name": "Audit virtual machines without disaster recovery configu",
+      "type": "BuiltIn",
+      "definitionType": "Policy",
+      "category": "Compute"
+    },
+    {
+      "name": "Microsoft Managed Control 1375 - Incident Response A",
+      "type": "Static",
+      "definitionType": "Policy",
+      "category": "Regulatory Compliance"
+    },
+    {
+      "name": "Restrict location of information processing, storage and",
+      "type": "BuiltIn",
+      "definitionType": "Policy",
+      "category": "Regulatory Compliance"
+    },
+    {
+      "name": "Vulnerability assessment should be enabled on your Syn",
+      "type": "BuiltIn",
+      "definitionType": "Policy",
+      "category": "Synapse"
+    },
+    {
+      "name": "Enable logging by category group for microsoft.network",
+      "type": "BuiltIn",
+      "definitionType": "Policy",
+      "category": "Monitoring"
+    },
+    {
+      "name": "Microsoft Managed Control 1605 - Developer Security T",
+      "type": "Static",
+      "definitionType": "Policy",
+      "category": "Regulatory Compliance"
+    },
+    {
+      "name": "Establish parameters for searching secret authenticators",
+      "type": "BuiltIn",
+      "definitionType": "Policy",
+      "category": "Regulatory Compliance"
+    },
+    {
+      "name": "SQL Server Integration Services integration runtimes on",
+      "type": "BuiltIn",
+      "definitionType": "Policy",
+      "category": "Data Factory"
+    },
+    {
+      "name": "[Preview]: Configure VMSS created with Shared Image G",
+      "type": "BuiltIn",
+      "definitionType": "Policy",
+      "category": "Security Center"
+    },
+    {
+      "name": "Private endpoint connections on Batch accounts should",
+      "type": "Custom",
+      "definitionType": "Policy",
+      "category": "Batch"
+    }
+  ],
+  "assignments": [
+    {
+      "assignmentName": "Audit VMs without disaster recovery",
+      "scope": "sub-azfoundation-dev-std-001",
+      "type": "Policy",
+      "parameters": [
+        {
+          "parameterId": "privateEndpointPrivateLinkServiceId",
+          "parameterName": "Private Endpoint Link Service Id",
+          "parameterValue": "\"Microsoft.Media/keydelivery\"",
+          "referenceType": "User defined parameter",
+          "parameterType": "User defined parameter"
+        },
+        {
+          "parameterId": "privateEndpointGroupId",
+          "parameterName": "Private Endpoint Group Id",
+          "parameterValue": "\"keydelivery\"",
+          "referenceType": "User defined parameter",
+          "parameterType": "User defined parameter"
+        },
+        {
+          "parameterId": "privateDnsZoneIds",
+          "parameterName": "Array of Private Dns Zone Id",
+          "parameterValue": "[\"/subscriptions/4e09edb6-a2bf-4ee5-bf7c-64ec8e2de99e/resourceGroups/rg-network/providers/Microsoft.Network/privateDnsZones/privatelink.media.azure.net\"]",
+          "referenceType": "User defined parameter",
+          "parameterType": "User defined parameter"
+        },
+        {
+          "parameterId": "effect",
+          "parameterName": "Effect",
+          "parameterValue": "\"DeployIfNotExists\"",
+          "referenceType": "Default value",
+          "parameterType": "Default value"
+        }
+      ]
+    },
+    {
+      "assignmentName": "Enable network category logging",
+      "scope": "sub-azfoundation-dev-std-001",
+      "type": "Policy",
+      "parameters": [
+        {
+          "parameterId": "logsEnabled",
+          "parameterName": "Enable Logs",
+          "parameterValue": "true",
+          "referenceType": "Default value",
+          "parameterType": "Default value"
+        },
+        {
+          "parameterId": "logCategoryGroup",
+          "parameterName": "Log Category Group",
+          "parameterValue": "\"allLogs\"",
+          "referenceType": "User defined parameter",
+          "parameterType": "User defined parameter"
+        },
+        {
+          "parameterId": "workspaceId",
+          "parameterName": "Log Analytics Workspace",
+          "parameterValue": "\"/subscriptions/4e09edb6-a2bf-4ee5-bf7c-64ec8e2de99e/resourceGroups/rg-monitoring/providers/Microsoft.OperationalInsights/workspaces/la-shared\"",
+          "referenceType": "User defined parameter",
+          "parameterType": "User defined parameter"
+        }
+      ]
+    },
+    {
+      "assignmentName": "Managed Control Initiative",
+      "scope": "sub-azfoundation-dev-std-001",
+      "type": "Initiative",
+      "parameters": [
+        {
+          "parameterId": "allowedLocations",
+          "parameterName": "Allowed Locations",
+          "parameterValue": "[\"eastus\", \"eastus2\"]",
+          "referenceType": "User defined parameter",
+          "parameterType": "User defined parameter"
+        },
+        {
+          "parameterId": "tagName",
+          "parameterName": "Required Tag Name",
+          "parameterValue": "\"environment\"",
+          "referenceType": "User defined parameter",
+          "parameterType": "User defined parameter"
+        },
+        {
+          "parameterId": "effect",
+          "parameterName": "Default Effect",
+          "parameterValue": "\"Audit\"",
+          "referenceType": "Default value",
+          "parameterType": "Default value"
+        }
+      ]
+    }
+  ]
+}
