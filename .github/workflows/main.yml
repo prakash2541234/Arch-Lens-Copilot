@@ -1,9 +1,9 @@
-name :CI
+name: CI
 on: [push]
-jobs: 
-  build: 
+jobs:
+  build:
     runs-on: ubuntu-latest
-      steps: 
+    steps:
       - uses: actions/checkout@v3
-      - name: run build commands
-         run: echo "Build Started"
+      - name: Run build commands
+        run: echo "Build Started"
